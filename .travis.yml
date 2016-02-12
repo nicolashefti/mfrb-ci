@@ -6,4 +6,5 @@ env:
     - "FTP_USER=user"
     - "FTP_PASSWORD=password"
 after_success:
-    "echo 'put index.hmtl' | sftp $FTP_USER:$FTP_PASSWORD@sftp.dc0.gpaas.net"
+    - "lftp --help"
+    - "echo 'put index.hmtl' | sftp $FTP_USER:$FTP_PASSWORD@sftp.dc0.gpaas.net"
