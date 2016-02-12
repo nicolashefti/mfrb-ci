@@ -11,6 +11,8 @@
          syntaxCheck="false"
 >
   <testsuites>
-
+    <testsuite name="Empty Test Suite">
+      <directory suffix="Test.php" >.</directory>
+    </testsuite>
   </testsuites>
 </phpunit>
