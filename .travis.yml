@@ -6,4 +6,4 @@ env:
     - "FTP_USER=user"
     - "FTP_PASSWORD=password"
 after_success:
-    "curl --ftp-create-dirs -T index.html -u $FTP_USER:$FTP_PASSWORD sftp://sftp.dco.gpaas.net"
+    "echo 'put index.hmtl' | sftp $FTP_USER:$FTP_PASSWORD@sftp.dc0.gpaas.net"
