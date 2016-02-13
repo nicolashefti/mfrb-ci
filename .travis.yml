@@ -1,0 +1,9 @@
+language: php
+php:
+  - '5.6'
+env:
+  global:
+    - "FTP_USER=user"
+    - "FTP_PASSWORD=password"
+after_success:
+    - "echo 'put index.hmtl' | sftp -oStrictHostKeyChecking=no $FTP_USER:$FTP_PASSWORD@sftp.dc0.gpaas.net"
